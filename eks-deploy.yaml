@@ -32,11 +32,11 @@ metadata:
     k8s-app: cg-myapp
   name: cg-myapp
 spec:
-  selector:
-    app: cg-myapp
   ports:
   - name: http
     port: 80
     protocol: TCP
     targetPort: 8085
-  type: Loadbalancer
+  type: LoadBalancer
+  selector:
+    app: cg-myapp
